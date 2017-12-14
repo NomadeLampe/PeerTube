@@ -3,23 +3,27 @@ import {
   AllowNull,
   BeforeCreate,
   BeforeUpdate,
-  Column, CreatedAt,
+  Column,
+  CreatedAt,
   DataType,
-  Default, DefaultScope,
+  Default,
+  DefaultScope,
   HasMany,
   HasOne,
   Is,
   IsEmail,
-  Model, Scopes,
-  Table, UpdatedAt
+  Model,
+  Scopes,
+  Table,
+  UpdatedAt
 } from 'sequelize-typescript'
 import { hasUserRight, USER_ROLE_LABELS, UserRight } from '../../../shared'
+import { comparePassword, cryptPassword } from '../../helpers'
 import {
-  comparePassword,
-  cryptPassword
-} from '../../helpers'
-import {
-  isUserDisplayNSFWValid, isUserPasswordValid, isUserRoleValid, isUserUsernameValid,
+  isUserDisplayNSFWValid,
+  isUserPasswordValid,
+  isUserRoleValid,
+  isUserUsernameValid,
   isUserVideoQuotaValid
 } from '../../helpers/custom-validators/users'
 import { OAuthTokenModel } from '../oauth/oauth-token'
