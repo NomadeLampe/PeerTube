@@ -2,7 +2,6 @@
   "name": "peertube-client",
   "version": "0.0.1",
   "private": true,
-  "licence": "GPLv3",
   "author": {
     "name": "Florian Bigard",
     "email": "me@florianbigard.com",
@@ -18,7 +17,7 @@
     "ng": "ng",
     "postinstall": "npm rebuild node-sass"
   },
-  "license": "GPLv3",
+  "license": "AGPL-3.0",
   "dependencies": {},
   "devDependencies": {
     "@angular/animations": "~5.1.0",
